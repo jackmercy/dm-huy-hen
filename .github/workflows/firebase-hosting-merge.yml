@@ -18,7 +18,6 @@ jobs:
 
 
       - name: Deploy
-      - if: succes()
       - run: yarn run deploy:fire
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
