@@ -1,0 +1,19 @@
+<mat-card class="item" *ngIf="item" (dblclick)="edit.emit(item)">
+  <h2>{{ item.title }}</h2>
+  <p>
+    {{ item.description }}
+  </p>
+</mat-card>
+
+@if (item) {
+  <mat-card class="item" (dblclick)="edit.emit(item)">
+    <h2>{{ item.title }}</h2>
+    <p>
+      {{ item.description }}
+    </p>
+  </mat-card>
+} @else {
+  <mat-card class="item">
+    <h2>No data to display</h2>
+  </mat-card>
+}

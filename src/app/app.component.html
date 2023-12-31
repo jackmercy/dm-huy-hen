@@ -226,7 +226,11 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <p>Congratulations! Your app is running. 🎉 Below is test component</p>
+      <!--  -->
+      @for (item of listItems; track item.id) {
+        <app-list-item [item]="item"></app-list-item>
+      } 
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">

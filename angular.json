@@ -96,6 +96,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "dm-huy-hen:build:production",
+              "serveTarget": "dm-huy-hen:serve:production"
+            },
+            "development": {
+              "buildTarget": "dm-huy-hen:build:development",
+              "serveTarget": "dm-huy-hen:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

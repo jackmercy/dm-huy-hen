@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dm-huy-hen": {
+      "hosting": {
+        "dm-huy-hen": [
+          "ditme-huy-hen"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dm-huy-hen"
+  }
+}
