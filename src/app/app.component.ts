@@ -12,7 +12,7 @@ import { ListItemComponent } from '../pages/list-item/list-item.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'dm-huy-hen';
+  title = 'Hèn Huy Hè';
   listItems: ListItem[] = [
     {
       id: 1,
