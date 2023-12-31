@@ -12,18 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: yarn install && yarn run build
+      - run: yarn run deploy:fire
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DM_HUY_HEN }}'
           channelId: live
           projectId: dm-huy-hen
-    steps:
-      - uses: actions/checkout@v3
-      - run: yarn run deploy:fire
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-            repoToken: '${{ secrets.GITHUB_TOKEN }}'
-            firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DM_HUY_HEN }}'
-            channelId: live
-            projectId: dm-huy-hen
