@@ -15,14 +15,14 @@ jobs:
 
       - name: Install & Build
       - run: yarn install && yarn run build
-
-
-      - name: Deploy
-      - run: yarn run deploy:fire
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DM_HUY_HEN }}'
           channelId: live
           projectId: dm-huy-hen
+
+      - name: Deploy
+      - run: yarn run deploy:fire
+      
       
