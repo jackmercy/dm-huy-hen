@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/dm-huy-hen",
+    "public": "dist/dm-huy-hen/browser",
     "site": "ditme-huy-hen",
     "ignore": [
       "firebase.json",
