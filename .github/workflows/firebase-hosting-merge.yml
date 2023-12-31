@@ -23,7 +23,7 @@ jobs:
 
       - name: Deploy
         if: success()
-        run: yarn run deploy:fire
+        # run: yarn run deploy:fire
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
