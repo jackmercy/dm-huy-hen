@@ -11,18 +11,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
 
       - name: Install & Build
-      - run: yarn install && yarn run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+        run: yarn install && yarn run build
+
+      - name: Deploy
+        if: success()
+        run: yarn run deploy:fire
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DM_HUY_HEN }}'
           channelId: live
           projectId: dm-huy-hen
 
-      - name: Deploy
-      - run: yarn run deploy:fire
+
       
       
